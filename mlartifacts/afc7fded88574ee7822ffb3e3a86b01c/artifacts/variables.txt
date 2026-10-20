@@ -1,0 +1,149 @@
+ceiling_height
+log1p_to_center_km
+log1p_metro_distance_min
+has_balcony
+is_walk_to_metro
+is_first_floor
+is_last_floor
+building_type_khrushchev
+building_type_modern_panel
+building_type_monolith
+building_type_panel
+building_type_stalin
+renovation_designer
+renovation_euro
+renovation_no_renovation
+district_Akademichesky
+district_Alekseevsky
+district_Altufyevsky
+district_Arbat
+district_Babushkinsky
+district_Basmanny
+district_Begovoy
+district_Beskudnikovsky
+district_Bibirevo
+district_Biryulyovo Vostochnoye
+district_Biryulyovo Zapadnoye
+district_Bogorodskoye
+district_Brateyevo
+district_Butyrsky
+district_Chertanovo Severnoye
+district_Chertanovo Tsentralnoye
+district_Chertanovo Yuzhnoye
+district_Cheryomushki
+district_Danilovsky
+district_Desyonovskoye
+district_Dmitrovsky
+district_Donskoy
+district_Dorogomilovo
+district_Fili-Davydkovo
+district_Filimonkovskoye
+district_Filyovsky Park
+district_Gagarinsky
+district_Golovinsky
+district_Golyanovo
+district_Ivanovskoye
+district_Izmaylovo
+district_Khamovniki
+district_Khoroshyovo-Mnyovniki
+district_Khoroshyovsky
+district_Khovrino
+district_Kievsky
+district_Klyonovskoye
+district_Kokoshkino
+district_Konkovo
+district_Koptevo
+district_Kosino-Ukhtomsky
+district_Kotlovka
+district_Krasnopakhorskoye
+district_Krasnoselsky
+district_Krylatskoye
+district_Kuntsevo
+district_Kurkino
+district_Levoberezhny
+district_Lianozovo
+district_Lomonosovsky
+district_Losinoostrovsky
+district_Marfino
+district_Marushkinskoye
+district_Maryina Roshcha
+district_Meshchansky
+district_Metrogorodok
+district_Mikhaylovo-Yartsevskoye
+district_Mitino
+district_Molzhaninovsky
+district_Moskovsky
+district_Moskvorechye-Saburovo
+district_Mosrentgen
+district_Mozhaysky
+district_Nagatino-Sadovniki
+district_Nagatinsky Zaton
+district_Nagorny
+district_Novo-Peredelkino
+district_Novofyodorovskoye
+district_Novogireyevo
+district_Novokosino
+district_Obruchevsky
+district_Ochakovo-Matveyevskoye
+district_Orekhovo-Borisovo Severnoye
+district_Orekhovo-Borisovo Yuzhnoye
+district_Ostankinsky
+district_Otradnoye
+district_Perovo
+district_Pervomayskoye
+district_Pokrovskoye-Streshnevo
+district_Preobrazhenskoye
+district_Presnensky
+district_Prospekt Vernadskogo
+district_Ramenki
+district_Rogovskoye
+district_Rostokino
+district_Ryazanovskoye
+district_Savyolovsky
+district_Severnoye Butovo
+district_Severnoye Izmaylovo
+district_Severnoye Medvedkovo
+district_Severnoye Tushino
+district_Severny
+district_Shchapovskoye
+district_Shcherbinka
+district_Shchukino
+district_Sokol
+district_Sokolinaya Gora
+district_Sokolniki
+district_Solntsevo
+district_Sosenskoye
+district_Strogino
+district_Sviblovo
+district_Tagansky
+district_Timiryazevsky
+district_Troitsk
+district_Troparyovo-Nikulino
+district_Tsaritsyno
+district_Tverskoy
+district_Tyoply Stan
+district_Veshnyaki
+district_Vnukovo
+district_Vnukovskoye
+district_Voronovskoye
+district_Voskresenskoye
+district_Vostochnoye Izmaylovo
+district_Vostochny
+district_Voykovsky
+district_Yakimanka
+district_Yaroslavsky
+district_Yasenevo
+district_Yuzhnoye Butovo
+district_Yuzhnoye Medvedkovo
+district_Yuzhnoye Tushino
+district_Zamoskvorechye
+district_Zapadnoye Degunino
+district_Zelenograd
+district_Zyablikovo
+district_Zyuzino
+year_2021
+year_2022
+year_2023
+year_2024
+year_2025
+year_2026

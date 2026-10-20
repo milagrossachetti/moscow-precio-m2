@@ -1,0 +1,16 @@
+# Entorno
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Datos intermedios: se regeneran corriendo los notebooks
+data/processed/*
+!data/processed/.gitkeep
+
+# OS / editores
+.DS_Store
+.vscode/
+.idea/
+
+# MLflow: mlflow.db y mlartifacts/ SÍ se versionan (son parte de la entrega).

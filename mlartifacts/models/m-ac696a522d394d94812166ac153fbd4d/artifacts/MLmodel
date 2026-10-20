@@ -1,0 +1,158 @@
+artifact_path: mlartifacts/models/m-ac696a522d394d94812166ac153fbd4d/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.13.13
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.1
+    skops_trusted_types: null
+is_signature_from_type_hint: false
+mlflow_version: 3.17.1
+model_id: m-ac696a522d394d94812166ac153fbd4d
+model_size_bytes: 376105
+model_uuid: m-ac696a522d394d94812166ac153fbd4d
+prompts: null
+run_id: 6c13479867274ad9a0e5cdf3ed1f3fd9
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  serving_input_path: serving_input_example.json
+  type: dataframe
+signature:
+  inputs: '[{"type": "double", "name": "ceiling_height", "required": true}, {"type":
+    "double", "name": "log1p_to_center_km", "required": true}, {"type": "double",
+    "name": "log1p_metro_distance_min", "required": true}, {"type": "double", "name":
+    "has_balcony", "required": true}, {"type": "double", "name": "is_walk_to_metro",
+    "required": true}, {"type": "double", "name": "is_first_floor", "required": true},
+    {"type": "double", "name": "is_last_floor", "required": true}, {"type": "double",
+    "name": "building_type_khrushchev", "required": true}, {"type": "double", "name":
+    "building_type_modern_panel", "required": true}, {"type": "double", "name": "building_type_monolith",
+    "required": true}, {"type": "double", "name": "building_type_panel", "required":
+    true}, {"type": "double", "name": "building_type_stalin", "required": true}, {"type":
+    "double", "name": "renovation_designer", "required": true}, {"type": "double",
+    "name": "renovation_euro", "required": true}, {"type": "double", "name": "renovation_no_renovation",
+    "required": true}, {"type": "double", "name": "district_Akademichesky", "required":
+    true}, {"type": "double", "name": "district_Alekseevsky", "required": true}, {"type":
+    "double", "name": "district_Altufyevsky", "required": true}, {"type": "double",
+    "name": "district_Arbat", "required": true}, {"type": "double", "name": "district_Babushkinsky",
+    "required": true}, {"type": "double", "name": "district_Basmanny", "required":
+    true}, {"type": "double", "name": "district_Begovoy", "required": true}, {"type":
+    "double", "name": "district_Beskudnikovsky", "required": true}, {"type": "double",
+    "name": "district_Bibirevo", "required": true}, {"type": "double", "name": "district_Biryulyovo
+    Vostochnoye", "required": true}, {"type": "double", "name": "district_Biryulyovo
+    Zapadnoye", "required": true}, {"type": "double", "name": "district_Bogorodskoye",
+    "required": true}, {"type": "double", "name": "district_Brateyevo", "required":
+    true}, {"type": "double", "name": "district_Butyrsky", "required": true}, {"type":
+    "double", "name": "district_Chertanovo Severnoye", "required": true}, {"type":
+    "double", "name": "district_Chertanovo Tsentralnoye", "required": true}, {"type":
+    "double", "name": "district_Chertanovo Yuzhnoye", "required": true}, {"type":
+    "double", "name": "district_Cheryomushki", "required": true}, {"type": "double",
+    "name": "district_Danilovsky", "required": true}, {"type": "double", "name": "district_Desyonovskoye",
+    "required": true}, {"type": "double", "name": "district_Dmitrovsky", "required":
+    true}, {"type": "double", "name": "district_Donskoy", "required": true}, {"type":
+    "double", "name": "district_Dorogomilovo", "required": true}, {"type": "double",
+    "name": "district_Fili-Davydkovo", "required": true}, {"type": "double", "name":
+    "district_Filimonkovskoye", "required": true}, {"type": "double", "name": "district_Filyovsky
+    Park", "required": true}, {"type": "double", "name": "district_Gagarinsky", "required":
+    true}, {"type": "double", "name": "district_Golovinsky", "required": true}, {"type":
+    "double", "name": "district_Golyanovo", "required": true}, {"type": "double",
+    "name": "district_Ivanovskoye", "required": true}, {"type": "double", "name":
+    "district_Izmaylovo", "required": true}, {"type": "double", "name": "district_Khamovniki",
+    "required": true}, {"type": "double", "name": "district_Khoroshyovo-Mnyovniki",
+    "required": true}, {"type": "double", "name": "district_Khoroshyovsky", "required":
+    true}, {"type": "double", "name": "district_Khovrino", "required": true}, {"type":
+    "double", "name": "district_Kievsky", "required": true}, {"type": "double", "name":
+    "district_Klyonovskoye", "required": true}, {"type": "double", "name": "district_Kokoshkino",
+    "required": true}, {"type": "double", "name": "district_Konkovo", "required":
+    true}, {"type": "double", "name": "district_Koptevo", "required": true}, {"type":
+    "double", "name": "district_Kosino-Ukhtomsky", "required": true}, {"type": "double",
+    "name": "district_Kotlovka", "required": true}, {"type": "double", "name": "district_Krasnopakhorskoye",
+    "required": true}, {"type": "double", "name": "district_Krasnoselsky", "required":
+    true}, {"type": "double", "name": "district_Krylatskoye", "required": true}, {"type":
+    "double", "name": "district_Kuntsevo", "required": true}, {"type": "double", "name":
+    "district_Kurkino", "required": true}, {"type": "double", "name": "district_Levoberezhny",
+    "required": true}, {"type": "double", "name": "district_Lianozovo", "required":
+    true}, {"type": "double", "name": "district_Lomonosovsky", "required": true},
+    {"type": "double", "name": "district_Losinoostrovsky", "required": true}, {"type":
+    "double", "name": "district_Marfino", "required": true}, {"type": "double", "name":
+    "district_Marushkinskoye", "required": true}, {"type": "double", "name": "district_Maryina
+    Roshcha", "required": true}, {"type": "double", "name": "district_Meshchansky",
+    "required": true}, {"type": "double", "name": "district_Metrogorodok", "required":
+    true}, {"type": "double", "name": "district_Mikhaylovo-Yartsevskoye", "required":
+    true}, {"type": "double", "name": "district_Mitino", "required": true}, {"type":
+    "double", "name": "district_Molzhaninovsky", "required": true}, {"type": "double",
+    "name": "district_Moskovsky", "required": true}, {"type": "double", "name": "district_Moskvorechye-Saburovo",
+    "required": true}, {"type": "double", "name": "district_Mosrentgen", "required":
+    true}, {"type": "double", "name": "district_Mozhaysky", "required": true}, {"type":
+    "double", "name": "district_Nagatino-Sadovniki", "required": true}, {"type": "double",
+    "name": "district_Nagatinsky Zaton", "required": true}, {"type": "double", "name":
+    "district_Nagorny", "required": true}, {"type": "double", "name": "district_Novo-Peredelkino",
+    "required": true}, {"type": "double", "name": "district_Novofyodorovskoye", "required":
+    true}, {"type": "double", "name": "district_Novogireyevo", "required": true},
+    {"type": "double", "name": "district_Novokosino", "required": true}, {"type":
+    "double", "name": "district_Obruchevsky", "required": true}, {"type": "double",
+    "name": "district_Ochakovo-Matveyevskoye", "required": true}, {"type": "double",
+    "name": "district_Orekhovo-Borisovo Severnoye", "required": true}, {"type": "double",
+    "name": "district_Orekhovo-Borisovo Yuzhnoye", "required": true}, {"type": "double",
+    "name": "district_Ostankinsky", "required": true}, {"type": "double", "name":
+    "district_Otradnoye", "required": true}, {"type": "double", "name": "district_Perovo",
+    "required": true}, {"type": "double", "name": "district_Pervomayskoye", "required":
+    true}, {"type": "double", "name": "district_Pokrovskoye-Streshnevo", "required":
+    true}, {"type": "double", "name": "district_Preobrazhenskoye", "required": true},
+    {"type": "double", "name": "district_Presnensky", "required": true}, {"type":
+    "double", "name": "district_Prospekt Vernadskogo", "required": true}, {"type":
+    "double", "name": "district_Ramenki", "required": true}, {"type": "double", "name":
+    "district_Rogovskoye", "required": true}, {"type": "double", "name": "district_Rostokino",
+    "required": true}, {"type": "double", "name": "district_Ryazanovskoye", "required":
+    true}, {"type": "double", "name": "district_Savyolovsky", "required": true}, {"type":
+    "double", "name": "district_Severnoye Butovo", "required": true}, {"type": "double",
+    "name": "district_Severnoye Izmaylovo", "required": true}, {"type": "double",
+    "name": "district_Severnoye Medvedkovo", "required": true}, {"type": "double",
+    "name": "district_Severnoye Tushino", "required": true}, {"type": "double", "name":
+    "district_Severny", "required": true}, {"type": "double", "name": "district_Shchapovskoye",
+    "required": true}, {"type": "double", "name": "district_Shcherbinka", "required":
+    true}, {"type": "double", "name": "district_Shchukino", "required": true}, {"type":
+    "double", "name": "district_Sokol", "required": true}, {"type": "double", "name":
+    "district_Sokolinaya Gora", "required": true}, {"type": "double", "name": "district_Sokolniki",
+    "required": true}, {"type": "double", "name": "district_Solntsevo", "required":
+    true}, {"type": "double", "name": "district_Sosenskoye", "required": true}, {"type":
+    "double", "name": "district_Strogino", "required": true}, {"type": "double", "name":
+    "district_Sviblovo", "required": true}, {"type": "double", "name": "district_Tagansky",
+    "required": true}, {"type": "double", "name": "district_Timiryazevsky", "required":
+    true}, {"type": "double", "name": "district_Troitsk", "required": true}, {"type":
+    "double", "name": "district_Troparyovo-Nikulino", "required": true}, {"type":
+    "double", "name": "district_Tsaritsyno", "required": true}, {"type": "double",
+    "name": "district_Tverskoy", "required": true}, {"type": "double", "name": "district_Tyoply
+    Stan", "required": true}, {"type": "double", "name": "district_Veshnyaki", "required":
+    true}, {"type": "double", "name": "district_Vnukovo", "required": true}, {"type":
+    "double", "name": "district_Vnukovskoye", "required": true}, {"type": "double",
+    "name": "district_Voronovskoye", "required": true}, {"type": "double", "name":
+    "district_Voskresenskoye", "required": true}, {"type": "double", "name": "district_Vostochnoye
+    Izmaylovo", "required": true}, {"type": "double", "name": "district_Vostochny",
+    "required": true}, {"type": "double", "name": "district_Voykovsky", "required":
+    true}, {"type": "double", "name": "district_Yakimanka", "required": true}, {"type":
+    "double", "name": "district_Yaroslavsky", "required": true}, {"type": "double",
+    "name": "district_Yasenevo", "required": true}, {"type": "double", "name": "district_Yuzhnoye
+    Butovo", "required": true}, {"type": "double", "name": "district_Yuzhnoye Medvedkovo",
+    "required": true}, {"type": "double", "name": "district_Yuzhnoye Tushino", "required":
+    true}, {"type": "double", "name": "district_Zamoskvorechye", "required": true},
+    {"type": "double", "name": "district_Zapadnoye Degunino", "required": true}, {"type":
+    "double", "name": "district_Zelenograd", "required": true}, {"type": "double",
+    "name": "district_Zyablikovo", "required": true}, {"type": "double", "name": "district_Zyuzino",
+    "required": true}, {"type": "double", "name": "year_2021", "required": true},
+    {"type": "double", "name": "year_2022", "required": true}, {"type": "double",
+    "name": "year_2023", "required": true}, {"type": "double", "name": "year_2024",
+    "required": true}, {"type": "double", "name": "year_2025", "required": true},
+    {"type": "double", "name": "year_2026", "required": true}]'
+  outputs: '[{"type": "double", "required": true}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2026-10-20 00:14:19.866268'
