@@ -14,3 +14,6 @@ data/processed/*
 .idea/
 
 # MLflow: mlflow.db y mlartifacts/ SÍ se versionan (son parte de la entrega).
+
+# Credenciales de MLflow remoto (DagsHub): nunca se versionan
+.env

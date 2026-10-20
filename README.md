@@ -44,6 +44,26 @@ y los runs de MLflow. Los notebooks ya están guardados **con sus salidas**, as�
 se pueden leer sin ejecutarlos (por ejemplo, directamente en GitHub).
 
 ## Ver las ejecuciones en MLflow
+
+### Online (DagsHub), sin instalar nada
+**https://dagshub.com/milagrossachetti/moscow-precio-m2.mlflow**
+
+Es el mismo experimento `moscow-secondary-price-per-sqm`, alojado en el servidor MLflow de DagsHub
+y abierto a cualquiera con el link.
+
+**Registrar los runs en DagsHub** (solo para quien tenga permisos de escritura en el repo de DagsHub):
+
+1. Generar un token en DagsHub: **User settings → Tokens**.
+2. Copiar `.env.example` como `.env` en la raíz del repo y completar el token. `.env` está en
+   `.gitignore`, así que el token nunca se sube a GitHub.
+3. Ejecutar `01_eda.ipynb` completo. `config.setup_mlflow()` detecta `MLFLOW_TRACKING_URI` y
+   registra los runs en DagsHub en lugar de `mlflow.db`. Los runs de una ejecución anterior quedan
+   en la papelera del experimento en DagsHub.
+
+Sin `.env` (ni la variable `MLFLOW_TRACKING_URI`), todo funciona en local como se describe abajo.
+En Colab, las mismas tres variables se pueden definir con `os.environ[...]` antes de ejecutar.
+
+### En local
 El repositorio incluye `mlflow.db` y `mlartifacts/` con todas las ejecuciones, así que **no hace
 falta ejecutar el notebook** para verlas.
 

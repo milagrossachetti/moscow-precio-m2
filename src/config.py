@@ -3,6 +3,7 @@
 Todo lo que se repite entre notebooks (rutas, semilla, nombres de MLflow)
 vive acá. Si algo cambia, se cambia en un solo lugar.
 """
+import os
 from pathlib import Path
 
 # --- Rutas -------------------------------------------------------------
@@ -34,9 +35,26 @@ EXCLUDED_COLS = ["id", "price_rub"]
 RANDOM_STATE = 42
 
 # --- MLflow ------------------------------------------------------------
-# Backend SQLite: un único archivo (mlflow.db) que se sube a GitHub,
-# así el profesor puede abrir `mlflow ui` y ver todas las ejecuciones.
-MLFLOW_TRACKING_URI = f"sqlite:///{ROOT / 'mlflow.db'}"
+def _cargar_env(ruta=ROOT / ".env"):
+    """Carga las variables KEY=VALUE de .env (si existe) sin pisar las ya definidas."""
+    if not ruta.exists():
+        return
+    for linea in ruta.read_text().splitlines():
+        linea = linea.strip()
+        if linea and not linea.startswith("#") and "=" in linea:
+            clave, valor = linea.split("=", 1)
+            os.environ.setdefault(clave.strip(), valor.strip().strip("\"'"))
+
+
+_cargar_env()
+
+# Por defecto, backend SQLite local (mlflow.db + mlartifacts/, versionados en el repo).
+# Si MLFLOW_TRACKING_URI está definida (variable de entorno o .env), se usa ese servidor
+# remoto (por ejemplo DagsHub); MLflow toma el usuario y el token de
+# MLFLOW_TRACKING_USERNAME y MLFLOW_TRACKING_PASSWORD.
+MLFLOW_TRACKING_URI_LOCAL = f"sqlite:///{ROOT / 'mlflow.db'}"
+MLFLOW_TRACKING_URI = os.environ.get("MLFLOW_TRACKING_URI") or MLFLOW_TRACKING_URI_LOCAL
+MLFLOW_REMOTO = not MLFLOW_TRACKING_URI.startswith("sqlite:")
 MLFLOW_EXPERIMENT = "moscow-secondary-price-per-sqm"
 MLFLOW_ARTIFACTS = ROOT / "mlartifacts"
 
@@ -73,16 +91,18 @@ def _rutas_mlflow_relativas():
 def setup_mlflow():
     """Conecta MLflow al backend del proyecto y activa el experimento.
 
-    Trabaja desde la raíz del repo (os.chdir) y deja las rutas de artefactos
-    relativas, para que mlflow.db y mlartifacts/ funcionen en cualquier computadora.
+    En modo local trabaja desde la raíz del repo (os.chdir) y deja las rutas de
+    artefactos relativas, para que mlflow.db y mlartifacts/ funcionen en cualquier
+    computadora. En modo remoto el servidor guarda los artefactos.
     """
-    import os
     import mlflow
 
     os.chdir(ROOT)  # las rutas relativas de los artefactos se resuelven desde acá
     mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
     if mlflow.get_experiment_by_name(MLFLOW_EXPERIMENT) is None:
-        mlflow.create_experiment(MLFLOW_EXPERIMENT, artifact_location=MLFLOW_ARTIFACTS.as_uri())
-    _rutas_mlflow_relativas()
+        destino = None if MLFLOW_REMOTO else MLFLOW_ARTIFACTS.as_uri()
+        mlflow.create_experiment(MLFLOW_EXPERIMENT, artifact_location=destino)
+    if not MLFLOW_REMOTO:
+        _rutas_mlflow_relativas()
     mlflow.set_experiment(MLFLOW_EXPERIMENT)
     return mlflow
